@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* simple smooth transitions */
+:root {
+  --smooth: 200ms;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+.chat-fade-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.chat-fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all var(--smooth) ease;
+}
